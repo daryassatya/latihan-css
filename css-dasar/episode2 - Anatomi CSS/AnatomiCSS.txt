@@ -1,0 +1,18 @@
+Anatomi CSS
+
+
+CSS Terdiri Dari:
+
+selector { property: value;}
+
+Contoh : h1 { color: blue; }
+
+Selector digunakan untuk memilih dan memanipulasi elemen spesifik pada HTML.
+Elemennya dapat berupa tag html, id, class bahkan pola/pattern
+
+Property adalah sesuatu atau perintah untuk mengubah elemen tersebut
+Sumber Properti CSS:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+http://css-tricks.com/almanac
+
+Value adalah sebuah patokan nilai dari properti yang kita terapkan ke element
