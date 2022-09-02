@@ -1,0 +1,73 @@
+/* 
+    1. font-family
+
+        nama font dan generic family
+        
+        Contoh : 
+        
+                body {
+                    arial, verdana adalah nama font, sans-serif adalah generic familynya 
+                    font-family: arial, verdana, sans-serif
+                }
+
+                    sans-serif adalah jenis font yang tidak memiliki lengkungan kaki yang runcing
+                    serif adalah jenis font yang memiliki lengkungan kaki yang runcing
+
+                p {
+                    font-family: "Times New Roman", serif
+                }
+
+    
+    2. font-size 
+    Jenis Valuenya ada 3 yaitu :
+    -> px
+    -> %
+    -> em
+
+    3. font-weight
+    Jenis valuenya :
+    -> lighter
+    -> normal
+    -> 100-900
+    -> bold
+    -> bolder
+
+    4. font-variant
+    Jenis Value : 
+    -> normal
+    -> small-caps
+
+    5. font-style
+    Jenis Value :
+    -> normal
+    -> italic
+    -> oblique
+
+    6. font-size Jenis Valuenya ada 3 yaitu : 
+    -> px 
+    -> % 
+    -> em
+
+    -- SHORT HAND --
+    h3{
+        font: font-style(optional) font-variant(optional) font-weight(optional) font-size(WAJIB)/font-height(optional) font-family(WAJIB;
+    }
+*/
+h1 {
+    /* arial, verdana adalah nama font, sedangkan sans-serif adalah generic familynya */
+    font-family: arial, verdana, sans-serif;
+    font-size: 100px;
+    font-weight: normal;
+    font-variant: small-caps;
+    font-style: oblique;
+}
+
+.short-hand{
+    font: italic normal bold 16px/18px helvetica, arial, sans-serif;
+}
+
+p {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    line-height: 50px;
+}
