@@ -1,0 +1,44 @@
+/* 
+
+Properti Pada Background :
+
+1.  background-color
+        Jenis value : ->nama warna : red, lightgreen, royalblue, ... 
+        ->hexadeximal : #ff0000, #20b2aa, #4169e1, ... 
+        ->rgb : rgb(255, 0, 0),rgb(32, 178, 170), ...
+
+2.  background-image
+    Jenis value :
+    -> url()
+
+3.  background-position
+    Jenis value : 
+    -> top left
+    -> top center
+    -> top right
+    -> center left
+    -> center right 
+    -> bottom left65
+    -> bottom center
+    -> bottom right
+    ->  x% y%
+    ->  x-pos y-pos
+
+4.  background-repeat
+    Jenis value :
+    -> repaat-x 
+    -> repeat-y
+    -> no-repeat
+
+    Semua Bisa menjadi satu baris
+    background : color url() position repeat;
+
+*/
+
+body{
+    /* background-color: bisque;
+    background-image: url(gambar/bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center; */
+    background: bisque url(gambar/bg2.jpg) top center no-repeat;
+}
