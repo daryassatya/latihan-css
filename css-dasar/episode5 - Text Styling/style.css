@@ -1,0 +1,67 @@
+/* 
+
+Attribute dari Text Styling
+
+1.  color
+    Jenis value :
+    -> nama warna   :   red, lightgreen, royalblue, ...
+    -> hexadeximal  :   #ff0000, #20b2aa, #4169e1, ...
+    -> rgb  :   rgb(255, 0, 0), rgb(32, 178, 170), ...
+
+2.  text-align
+    Jenis value :
+    ->  left
+    ->  right
+    ->  center
+    ->  justify
+
+3.  text-indent
+    Jenis value : 
+    -> px
+    -> %
+
+4.  text-decoration
+    Jenis value :
+    -> none
+    -> underline (garis bawah)
+    -> overline (garis diatas tulisan)
+    -> line-through (garis mencoret tulisan)
+
+5.  text-transform
+    Jenis value :
+    -> none
+    -> lowercase
+    -> uppercase
+    -> capitalize
+
+6.  letter-spacing
+    Jenis value :
+    -> normal
+    -> px
+
+7.  word-spacing
+    Jenis value : 
+    ->normal 
+    ->px
+
+
+*/
+
+h1{
+    font-size: 150px;
+    /* color:skyblue; */
+    /* color:#27918F; */
+    color: rgb(39, 145, 143);
+    text-align: center;
+    text-decoration: overline;
+}
+
+p{
+    /* untuk justify akan lebih terlihat perbedaannya jika digunakan kedalam sebuah paragraf */
+    text-align: justify;
+    text-indent: 30px;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    word-spacing: 5px;
+}
+
