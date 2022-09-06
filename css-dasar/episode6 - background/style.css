@@ -3,7 +3,8 @@
 Properti Pada Background :
 
 1.  background-color
-        Jenis value : ->nama warna : red, lightgreen, royalblue, ... 
+        Jenis value : 
+        ->nama warna : red, lightgreen, royalblue, ... 
         ->hexadeximal : #ff0000, #20b2aa, #4169e1, ... 
         ->rgb : rgb(255, 0, 0),rgb(32, 178, 170), ...
 
@@ -18,7 +19,7 @@ Properti Pada Background :
     -> top right
     -> center left
     -> center right 
-    -> bottom left65
+    -> bottom left
     -> bottom center
     -> bottom right
     ->  x% y%
