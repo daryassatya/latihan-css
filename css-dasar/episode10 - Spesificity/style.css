@@ -1,0 +1,50 @@
+/* 
+
+    Setiap deklarasi css (selector) memiliki berat yang berbeda. Berat tersebut menentukan seberapa spesifik sebuah elemen dapat dipilih oleh selector.
+    
+    Skor perhitungan
+    - inline    = 1000
+    - id        =  100
+    - class     =   10
+    - element   =    1
+*/
+
+
+ /* Case 1   */
+p {
+    color: red;
+    /* skor = 1 */
+}
+
+p {
+    color: green; 
+    /* skor = 1 */
+}
+
+/* karena skornya sama, maka akan mengambil yg terakhir. Warna menjadi hijau ! */
+
+
+/* Case 2 */
+#p1 {
+    color: red; 
+    /* skor = 100 */
+}
+
+p {
+    color: green; 
+    /* skor = 1 */
+}
+
+/* skor = 100 lebih besar dari 1. Warnanya menjadi merah ! */
+
+/* Case 3 */
+ul#sarapan li {
+    color: green; 
+    /* skor = 1 + 100 + 1 = 102 */
+}
+
+ul#sarapan li.favorit{
+    color: red;
+    /* skor = 1 + 100 + 1 + 10 = 112 */
+}
+/* skor 112 lebih banyak. sehingga akan menjadi warna Merah! */
