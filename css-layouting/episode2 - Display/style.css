@@ -1,0 +1,38 @@
+.navigasi {
+    background-color: grey;
+}
+
+.main {
+    /* element block didalamnya mengikuti juga */
+    background-color: green;
+    width: 600px;
+}
+
+.main span {
+    background-color: blue;
+}
+
+.navigasi li {
+    display: inline;
+}
+
+a {
+    background-color: pink;
+    /* tidak dapat diubah width/height harus diubah menjadi display inline-block */
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+/* perilaku element block */
+h1,
+h2,
+p {
+    background-color: aqua;
+}
+
+img {
+    /* walaupun display inline tetapi dapat mengubah width/height */
+    width: 200px;
+    height: 200px;
+}

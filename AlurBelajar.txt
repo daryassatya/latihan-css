@@ -2,4 +2,5 @@ Source youtube: Web Programming Unpas
 
 Ikuti Step By Step :
 
-1.css-dasar
+1. css-dasar
+2. css-layouting
