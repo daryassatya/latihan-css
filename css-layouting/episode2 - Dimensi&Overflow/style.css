@@ -1,0 +1,48 @@
+/* 
+    Dimensi & Overflow
+
+    1. Dimensi
+    Properti pada dimensi :
+    1. Widtih   (Lebar)
+    2. Height   (Tinggi)
+
+    satuan :
+    1. px   (absolut)
+    2. %    (relatif terhadap parent atau pembukusnya atau browser)
+    3. in, cm, mm, pt(point), pc(pica)
+
+    2. Overflow
+    properti :
+    1. visible (default)
+
+    2. auto
+    Akan menambahkan scroll baik horizontal maupun vertical
+
+    3. hidden
+    Isi yang berlebihan akan di sembunyikan
+
+    4. scroll 
+    Akan tetap menambahkan scroll walaupun isi tidak berlebihan
+*/
+
+.satu {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
+
+.dua {
+    /* Jiika child lebih besar dari element parentnya, maka dia akan keluar */
+    width: 120%;
+    background-color: aqua;
+}
+
+.tes2 {
+
+    /* jangan dihapus */
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    background-color: grey;
+}
