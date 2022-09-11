@@ -1,0 +1,156 @@
+/* 
+    Margin adalah area transparan disekitar kotak
+
+    Materi Margin berisi : 
+*/
+
+/* #1. Cara Pakai */
+/* .satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+} */
+
+/* #2. Overlapping Margin */
+/* Terjadi ketika kita menggabungkan 2 buah margin seperti kiri dan kanan atau atas dan bawah */
+
+/* --- Case Vertical --- */
+/* Margin top dari .dua ini tidak akan ditambahkan karena kalah besar dengan margin-bottom 150px dari div diatasnya */
+/* .satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 50px;
+}
+
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+} */
+
+/* --- Case Vertical --- */
+/* Marginnya bertamah, dan tidak menimpa (Dijumlahkann antara kanan dan kirinya) */
+/* div {
+    display: inline-block;
+}
+
+.satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-right: 30px;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-left: 20px;
+}
+
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+} */
+
+
+/* #3. Negative Margin */
+/* .satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-bottom: 30px;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: -150px;
+}
+
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+} */
+
+
+/* #4. Margin Auto */
+/* .satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+/* #5. Shorthand Margin */
+/* 1. margin: 50px (Menambahkan 50px disemua sisi)*/
+/* 2. margin: 50px 100px; (50px untuk atas-bawah) (100px untuk kanan-kiri) */
+/* 3. margin: 30px auto 40px; (30px untuk atas) (auto kiri-kanan) (40px untuk bawah) */
+/* 4. margin: 10px 20px 30px 40px; (10px atas) (20px kanan) (30px bawah) (40px kiri) (searah jarum jam) */
+.satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin: 10px 20px 30px 40px;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+
+}
+
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+
+}
