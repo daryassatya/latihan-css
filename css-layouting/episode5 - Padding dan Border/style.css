@@ -1,0 +1,50 @@
+/* 
+    Padding & Border
+
+    1. Padding
+    - hampir sama persis seperti margin namun valuenya tidak dapat diberi negatif ataupun auto.
+    - mempengaruhi ukuran suatu box, dimana jika ukuran width dan height adalah 300px dan terdapat margin berukuran 50px, maka 300px + 50px dari margin sehingga ukuran totalnya menjadi 350px
+
+    2. Border
+    Adalahbatas disekeliling content dan padding.
+
+    Border juga mempengaruhi ukuran dari box nya
+
+    Jenis value :
+    border : 5px(tebal), solid(jenis border), black(warna);
+
+    jenis style border ::after
+    - solid
+    - dotted
+    - dashed
+    - double
+*/
+
+/* .tes1 {
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    margin: 20px auto;
+    padding: 50px;
+    border: 5px solid black;
+
+    border-left: 5px solid black; yang ini hanya untuk samping kiri
+} */
+
+div {
+    width: 600px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.satu {
+    background-color: royalblue;
+    padding: 10px;
+    border: 15px solid red;
+}
+
+.dua {
+    background-color: lightgreen;
+    padding: 30px;
+    border: 10px dashed orange;
+}
