@@ -1,0 +1,107 @@
+/* 
+
+    #Float
+    merupakan properti pada CSS untuk mengatur sebuah elemen. Sebuah elemen dapat dipaksa untuk berada di sebelah kiri atau kanan dari parent/ pembungkusnya dengan menggunakan properti ini.
+
+    Jenis Value:
+    1. none
+    2. left
+    3. right
+
+    Yang bisa dilakukan dengan properti float :
+    - text wrapping = membuat teks mengelilingi gambar / elemen lain
+    - image gallery = membuat serangkaian gambar menjadi galeri
+    - multi-column layout membuat halaman memiliki beberapa kolom
+    - dll
+
+    #Normal flow vs out-of flow
+    
+    - Normal flow adalah seperti display atau box model
+
+    - Out of flow adalah menimpa Normal flow atau akan berada diatasnya
+
+    seperti contoh berikut :
+*/
+
+.container {
+    width: 600px;
+    /* width: 800px; Pakai yg ini untuk Case 4 */
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px
+}
+
+
+/* --- Case 1 --- */
+.satu,
+.dua,
+.tiga {
+    width: 100px;
+    height: 100px;
+}
+
+.satu {
+    background-color: salmon;
+}
+
+.dua {
+    background-color: lightgreen;
+    float: right;
+    margin-left: 20px;
+}
+
+.tiga {
+    background-color: lightblue;
+}
+
+
+
+/* --- Case2 ---- */
+/* img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 5px;
+} */
+
+
+
+/* --- Case 3 --- */
+/* tenang saja jika containernya mengecil, itu disebut colapse karena div class kotak sekarang keluar dari flow */
+/* .kotak {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    margin: 2px;
+    float: left;
+} */
+
+
+
+/* --- Case 4 --- */
+/* Pastikann lebarnya sesuai dengan container, jika tidak maka akan turun kebawahnya */
+/* Jika mau maka gunakan box-sizing: border-box */
+/* .kiri {
+    width: 150px;
+    height: 500px;
+    background-color: salmon;
+    float: left;
+}
+
+.tengah {
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+    float: left;
+}
+
+.kanan {
+    width: 150px;
+    height: 500px;
+    background-color: lightgreen;
+    float: left;
+} */
