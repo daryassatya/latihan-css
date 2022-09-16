@@ -1,0 +1,167 @@
+/* 
+    Ini adalah lanjutan dari materi CSS LAYOUTING - Float
+
+    Cara mengatasi float flow agar dianggap kedalam normal flow :
+    1. Menggunakan property overflow
+    2. menggunakan <div> kosong
+    3. menggunakan teknik micro clearfix
+
+    # Clear
+    Berfungsi menghentikan / membersihkan float
+    Jenis Value : 
+    - left
+    - right
+    - both
+
+*/
+
+/* --- Default Kasus 1 --- */
+/* .container {
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 5px;
+} */
+
+/* --- Kasus 1 - Cara 1 --- */
+/* .container {
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 5px;
+    overflow: auto;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 5px;
+} */
+
+/* --- Kasus 1 - Cara 2 --- */
+/* .container {
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 5px;
+}
+
+.clear {
+    clear: left;
+} */
+
+
+
+/* --- Kasus 2 - Cara 1 --- */
+/* .container {
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 5px;
+}
+
+.kotak {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    margin: 2px;
+    float: left;
+}
+
+.clear {
+    clear: left;
+} */
+
+
+
+/* --- Case 3 --- */
+/* Pastikann lebarnya sesuai dengan container, jika tidak maka akan turun kebawahnya */
+/* Jika mau maka gunakan box-sizing: border-box */
+.container {
+    width: 800px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.kiri {
+    width: 150px;
+    height: 500px;
+    background-color: salmon;
+    float: left;
+}
+
+.tengah {
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+    float: left;
+}
+
+.kanan {
+    width: 150px;
+    height: 500px;
+    background-color: lightgreen;
+    float: right;
+}
+
+/* .clear {
+    clear: both;
+} */
+
+
+/* Menggunakan ini : untuk clear float tanpa div */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
