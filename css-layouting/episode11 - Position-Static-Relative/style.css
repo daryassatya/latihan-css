@@ -1,0 +1,45 @@
+/* 
+
+    Position
+    Dengan meggunakan Position, kita dapat menggerakan suatu elemen tanpa mempengaruhi element lain disekitarnya,contoh margin.
+
+    Jenis Value :
+    - static
+        #adalah nilai default dari tiap-tiap elemen ketika diberi properti position.
+
+        #menggunakan position selain static (non-static), akan membuat sebuah element menjadi seolah-olah berada di dimensi berbeda dari elemen lainnya.
+
+        # Element yang diberi position SELAIN Static dapat menggunakan properti top, right bottom, dan left untuk mengatur posisinya.
+
+    - relative
+        #Ketika kita menggerakan elemen dengan posisi relative (menggunakan properti top, right, bottom, and left) ruang yang ditampati oleh elemen tersebut masih ada, namun elemen tersebut dapat dipindahkan kemanapun menimpa elemen lainnya.
+
+        # Ketika kita menggerakkan elemen dengan posisi relative, elemen akan bergerak relatif terhadap posisi semulanya (Patokan valuenya berdasarkan posisi semula dia berasal)
+
+        # Jika kita memberi properti top: 0; and left: 0; maka elemen tidak berubah posisinya
+
+        # Keluar dari flow
+    - absolute
+    - fixed
+*/
+
+
+div {
+    width: 200px;
+    height: 200px;
+}
+
+.satu {
+    background-color: lightgreen;
+}
+
+.dua {
+    background-color: violet;
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+
+.tiga {
+    background-color: gold;
+}
