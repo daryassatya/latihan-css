@@ -1,0 +1,76 @@
+/* 
+
+    Position
+    Dengan meggunakan Position, kita dapat menggerakan suatu elemen tanpa mempengaruhi element lain disekitarnya,contoh margin.
+
+    Jenis Value :
+    - static
+        #adalah nilai default dari tiap-tiap elemen ketika diberi properti position.
+
+        #menggunakan position selain static (non-static), akan membuat sebuah element menjadi seolah-olah berada di dimensi berbeda dari elemen lainnya.
+
+        # Element yang diberi position SELAIN Static dapat menggunakan properti top, right bottom, dan left untuk mengatur posisinya.
+
+    - relative
+        #Ketika kita menggerakan elemen dengan posisi relative (menggunakan properti top, right, bottom, and left) ruang yang ditampati oleh elemen tersebut masih ada, namun elemen tersebut dapat dipindahkan kemanapun menimpa elemen lainnya.
+
+        # Ketika kita menggerakkan elemen dengan posisi relative, elemen akan bergerak relatif terhadap posisi semulanya (Patokan valuenya berdasarkan posisi semula dia berasal)
+
+        # Jika kita memberi properti top: 0; and left: 0; maka elemen tidak berubah posisinya
+
+        # Keluar dari flow
+
+    - absolute
+        # Ketika kita menggerakkan elemen dengan posisi absolute (menggunakan properti top, left, bottom, dan right), ruang yang ditempati oleh element tersebut dianggap tidak ada (Berkebalikan dengan relative).
+
+        # Ketika kita menggerakkan elemen denganposisi absolute, elemen akan bergerak relatif terhadap  posisi dari element parentnya (Berbeda dengan relative yang patokan utamanya adalah posisi element itu sendiri)
+
+        # Tetapi parentnya haruslah memiliki posisi yang relative (non-static) juga agar maju satu dimensi kedepan.
+
+
+    - fixed
+        #
+*/
+
+body {
+    height: 2000px;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    width: 600px;
+    height: 650px;
+    border: 10px solid green;
+    margin: auto;
+    position: relative;
+}
+
+.satu {
+    background-color: lightgreen;
+}
+
+.dua {
+    background-color: violet;
+    position: fixed;
+    right: 0;
+    top: 0;
+    /* Akan berada di pojok kanan atas. karena parentnya adalah element body atau lebih tepatnya relatif terhadap element window */
+}
+
+/* Contoh jika kasusnya adalah navbar : */
+/* .dua {
+    background-color: violet;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 100%;
+} */
+
+.tiga {
+    background-color: gold;
+}
