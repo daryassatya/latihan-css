@@ -39,13 +39,13 @@ body {
 div {
     width: 200px;
     height: 200px;
+    margin: auto;
 }
 
 .container {
     width: 600px;
     height: 650px;
     border: 10px solid green;
-    margin: auto;
     position: relative;
 }
 
