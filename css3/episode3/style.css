@@ -1,0 +1,39 @@
+/* 
+
+    Opcaity adalah salah satu properti di css3 yang dapat digunakan untuk membuat sebuah transparansi pada element html
+
+    rgba() / Red Green Blue Alpha
+    Bedanya dengan opacity adalah, Opacity untuk element jadi bahkan div, img pun bisa sedangkan rgba adalah tipe color
+
+    hsla() / Hue Saturation  Lightness Alpha
+
+    NOTE :
+    - Child dari elemen yang berada di dalam element yang mempunyai opacity juga akan terpengaruh!
+*/
+
+body {
+    background-image: url(image/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.satu {
+    width: 300px;
+    height: 300px;
+    background-color: hsla(24, 100%, 68%, .5);
+    /* background-color: rgba(255, 102, 0, .5); */
+    /* opacity: 0.8;  Jika di CSS 0 koma maka 0 nya dapat tidak ditulis seperti berikut*/
+    /* opacity: .6; */
+    position: relative;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    /* opacity: .4; */
+    /*Jika ingin terpisah transparansinya*/
+}
