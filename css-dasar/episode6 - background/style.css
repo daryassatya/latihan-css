@@ -38,8 +38,8 @@ Properti Pada Background :
 
 body{
     /* background-color: bisque;
-    background-image: url(gambar/bg2.jpg);
+    background-image: url(/img/bg2.jpg);
     background-repeat: no-repeat;
     background-position: bottom center; */
-    background: bisque url(gambar/bg2.jpg) top center no-repeat;
+    background: bisque url(/img/bg2.jpg) top center no-repeat;
 }

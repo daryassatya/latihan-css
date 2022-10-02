@@ -136,7 +136,7 @@ table {
 
 body {
     font: 16px/20px arial, sans-serif;
-    background-image: url(leaves.png);
+    background-image: url(/img/bg3.png);
     color: #333;
 }
 
@@ -183,7 +183,7 @@ body {
 .hero {
     height: 300px;
     margin-top: 5px;
-    background-image: url(gambar.jpg);
+    background-image: url(/img/bg3.png);
     background-size: cover;
     background-position: 0 -20px;
     border-top: 5px solid lightblue;
