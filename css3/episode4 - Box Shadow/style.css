@@ -1,0 +1,21 @@
+/* 
+
+    box-shadow sebuah properti pada css untuk membuat sebuah bayangan kepada element
+
+    Value :
+    (inset(optional), x-offset ,y-offset, blur, (spread), color)
+
+    contoh : 
+    Tanpa koma!
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .75);
+
+*/
+
+
+div {
+    width: 300px;
+    height: 300px;
+    background-color: #39b54a;
+    margin: 50px auto;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .75);
+}
