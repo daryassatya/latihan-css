@@ -1,0 +1,43 @@
+/* 
+
+    Linear gradient bukanlah property css3, melainkan value untuk background-image
+
+    Linear Gradients
+    = Memberikan warna secara garis lurus
+
+    Radial Gradients
+    =  Memberikan warna secara melingkar
+
+*/
+
+div {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+
+    /* Kasus 1 Basic */
+    /* background: linear-gradient(red, green); */
+
+    /* Kasus 2 Multiple Colors */
+    /* background: linear-gradient(red, #f0d606, rgba(255, 255, 0, 1), green); */
+
+    /* Kasus 3 Sudut */
+    /* background: linear-gradient(45deg, red, green); */
+
+    /* Kasus 4  Arah */
+    /* value : 
+    - to top
+    - to bottom
+    - to right
+    - to left
+    - to right top
+    - to left top
+    - to right bottom
+    - to left bottom
+    */
+    /* background: linear-gradient(to right, red, green); */
+    /* background: linear-gradient(to bottom right, red, green); */
+
+    /* Kasus 4 Color Stop */
+    background: linear-gradient(to right, red 63%, green 80%);
+}
