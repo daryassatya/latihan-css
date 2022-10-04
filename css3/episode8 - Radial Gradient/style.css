@@ -1,0 +1,47 @@
+/* 
+
+    Radial Gradient, warna pertama adalah pusat dari warna dilingkaran itu
+
+    Value :
+    raidal-gradient(
+        <tipe = ellipse(default) / circle> <jangkauan> at <posisi-y> <posisi-x>
+        warna-1
+        warna-2
+        ...,
+        warna-n 
+    );
+
+*/
+
+div {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+
+    /* Kasus 1 Basic */
+    /* background: radial-gradient(red, green, blue); */
+
+    /* Kasus 2 Color Stop */
+    /* background: radial-gradient(red 10%, green 20%, blue 30%); */
+
+    /* Kasus 3 Tipe */
+    /* ellipse, circle */
+    /* background: radial-gradient(circle, red, green, blue); */
+
+    /* Kasus 4 Jangkauan */
+    /* Untuk mengstop penyebaran gradient dari warna yg paling pusat */
+
+    /* - closest-corner = jarak dari pusat gradient ke SUDUT TERDEKAT elemen*/
+    /* - closest-side = jarak dari pusat gradient ke SISI TERDEKAT elemen */
+
+    /* - farthest-corner = jarak dari pusat gradient ke SUDUT TERJAUH elemen */
+    /* - farthest-side = jarak dari pusat gradient ke SISI TERJAUH elemen */
+
+    /* background: radial-gradient(circle closest-side, red, blue); */
+
+    /* Kasus 5 Posisi */
+    /* posisi-x = top, center, bottom, px */
+    /* posisi-y = top, center, bottom, px */
+
+    background: radial-gradient(circle farthest-side at top left, red, blue);
+}
