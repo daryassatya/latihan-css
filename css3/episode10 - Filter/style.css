@@ -1,0 +1,112 @@
+/* 
+
+    Filter hanya dapat digunakan pada :
+    - gambar
+    - bakckground
+    - border
+
+    --- Wajib menggunakan webkit prefix ---
+    contoh:
+    -webkit-filter: blur(3px);
+
+
+    Efek Filter:
+    blur(px)
+    brightness(angka | %)
+    contrast(angka | %)
+    saturate(angka | %)
+    grayscale(angka | %)
+    sepia(angka | %)
+    hue-rotate(deg)
+    invert(angka | %)
+    opacity(angka | %)
+    drop-shadow(Sama seperti shadow)
+    
+
+    Opacity dan box shadow dapat digunakan dengan filter, namun lebih lambar 
+    karena tidak dibantu dengan hardware device
+
+    Web yang dapat membantu filtering untuk dump
+    https://html5-demos.appspot.com/static/css/filters/index.html
+*/
+
+
+img {
+    width: 900px;
+    height: 600px;
+    margin: 50px auto;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    -webkit-filter: drop-shadow(5px 5px 5px black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+}
+
+/* Coba Akhir */
+.foto {
+    -webkit-filter: opacity(.5);
+    transition: 1s;
+}
+
+.foto:hover {
+    -webkit-filter: opacity(1);
+}
+
+/* Blur */
+.foto1 {
+    -webkit-filter: blur(5px);
+}
+
+/* Brightness */
+.foto2 {
+    /* Value dibawah ini adalah setara! */
+    -webkit-filter: brightness(1.5);
+    /* -webkit-filter: brightness(150%); */
+}
+
+/* Contrast */
+.foto3 {
+    -webkit-filter: contrast(1.5);
+}
+
+/* Saturate */
+/* Jika saturate dibawah 100% maka dia akan semakina abu-abu ! */
+.foto4 {
+    -webkit-filter: saturate(1.5);
+
+}
+
+/* Gray Scale */
+.foto5 {
+    -webkit-filter: grayscale(1);
+}
+
+/* Sepia */
+.foto6 {
+    -webkit-filter: sepia(1);
+}
+
+/* Hue Rotate */
+/* Menggerakkan roda warna ! */
+.foto7 {
+    -webkit-filter: hue-rotate(100deg);
+}
+
+/* Invert */
+.foto8 {
+    -webkit-filter: invert(1);
+}
+
+/* Opacity */
+.foto9 {
+    -webkit-filter: opacity(.5)
+}
+
+/* Drop Shadow */
+/* Dengan menggunakan drop shadow, maka dapat diimplementasikan kepada box dan teks */
+.foto10 {
+    -webkit-filter: drop-shadow(5px 5px 5px black)
+}
