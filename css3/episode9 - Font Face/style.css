@@ -1,0 +1,30 @@
+/* 
+
+    Pastikan font harus ada di sistem operasi client / user
+
+    cara ke-2 adalah menggunakan Google Fonts
+        https: //fonts.google.com/
+
+    Sumber lain : 
+    - fonts.google.com
+    - fontsquirell.com
+    - fontspring.com
+    - webtype.com
+    - typotheque.com
+
+*/
+@font-face {
+    font-family: "Roboto Daryas";
+    src: url(/font/Roboto-Regular.ttf);
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+
+    /* Test 1 */
+    /* font-family: 'Roboto', sans-serif; */
+
+    /* Test 2  */
+    font-family: "Roboto Daryas", sans-serif;
+}
