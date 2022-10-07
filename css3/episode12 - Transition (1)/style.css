@@ -1,0 +1,79 @@
+/* 
+
+    Properti Transition memungkinkan kita dapat mengubah nilai dari properti HTML lainnya secara halus
+
+    WARNING ! 
+    Selalu simpan transition di keadaan awal (bukan di hover)
+
+    Perbedaa antara transition dengan animation
+    - transition hanya memiliki satu tujuan akhir
+    - animation dapat memiliki keadaan yang dinamakan keyframe, untuk mengatur 
+    pergerakan suatu element html menjadi bermacam-macam
+
+    Penulisan = 
+    [] artinya optional
+    <> artinya wajib ada
+    transition: [property] <durasi> [fungsi] [delay]
+
+->  Animatable Properties :
+    background-color
+    background-position
+    backgorund-size
+    border
+    color
+    filter
+    font-size
+    line height
+    top left bottom right
+    margin padding
+    width
+    height
+    opacity
+    transform
+    word-spacing
+    leteer-spacing
+    dan lain lain ..
+
+->  Non Animatable Properties
+    font-family
+    display
+    position
+
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 900px;
+    margin: 10px auto;
+    border: solid 5px black;
+}
+
+.kotak {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+
+    /* Hanya durasi */
+    /* Sebenarnya ini mengirim kan seperti = transition: all 1s */
+    /* transition: 1s; */
+
+    /* Dengan fungsi */
+    transition: margin-left 1s;
+
+}
+
+/* Akan patah-patah jika seperti dibawah ini */
+/* .kotak:hover {
+    transform: rotate(45deg);
+    margin-left: 800px;
+} */
+
+.container:hover .kotak {
+    transform: rotate(180deg);
+    margin-left: 700px;
+    background-color: blue;
+}
