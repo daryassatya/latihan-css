@@ -1,0 +1,74 @@
+/* 
+
+    Properti Transform memungkinkan kita dapat memanipulasi format visual dari element HTML
+    baik secara 2D ataupun 3D
+
+    cara menulis :
+    transform: <fungsi>;
+
+    fungsi transformasi :
+    
+    1. scale
+    Untuk memperbesar / memperkecil
+    contoh : scale(angka), scaleX(angka), scaleY(angka), transform: scale(sumbuX, sumbuY);
+
+    2. rotate
+    Untuk memutar
+    contoh : rotate(deg), rotateX(deg), rotateY(angka)
+
+    3. skew
+    Untuk membuat condong / miring
+    contoh : skew(deg), skewX(deg), skewY(deg)
+
+    4. translate
+    Untuk mengubah posisi
+    translate(px), translateX(px), translateY(px)
+
+
+*/
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.kotak {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 50px auto 0;
+    transition: .5s;
+}
+
+.kotak:hover {
+
+    /*  --- Scale --- */
+    /* transform: scale(1.2); */
+    /* transform: scale(2, 1.2); */
+
+
+    /* --- Rotate --- */
+    /* Nilai MINUS = Ke KIRI, POSITIF = Ke Kanan */
+    /* transform: rotate(45deg); */
+    /* transform: rotate(-45deg); */
+
+    /* Sumbu */
+    /* transform: rotateX(180deg); */
+    /* transform: rotateY(180deg); */
+
+    /* Double */
+    /* transform: rotateX(180deg) rotateY(180deg); */
+
+    /* --- Skew --- */
+    /* transform: skew(30deg); */
+    /* transform: skewX(30deg); Sama seperti skew default*/
+    /* transform: skewY(30deg); */
+
+    /* Transalate */
+    /* Tidak mempengaruhi elemen lain */
+    /* transform: translate(50px, 100px); */
+    /* transform: translateX(50px) translateY(100px); Sama seperti yang diatas*/
+
+    /* Test terakhir (MENUMPUK Fungsi Transform) */
+    transform: scale(1.5) rotate(360deg);
+}
