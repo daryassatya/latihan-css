@@ -67,11 +67,13 @@ body {
 }
 
 /* Akan patah-patah jika seperti dibawah ini */
+/* Itu karena bergeraknya titik acuan hover, shingga kursor harus benar benar tapat pada saat bergerak juga */
 /* .kotak:hover {
     transform: rotate(45deg);
     margin-left: 800px;
 } */
 
+/* Solusinya adalah membuat bungkus menjadi agar kursor dapat berada ditempat sehingga animasi berjalan lancar */
 .container:hover .kotak {
     transform: rotate(180deg);
     margin-left: 700px;

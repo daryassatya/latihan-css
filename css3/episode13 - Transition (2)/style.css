@@ -1,0 +1,77 @@
+/* 
+
+    Disini akan dibahas parameter fungsi pada transition
+
+    parameter transition : [property] <durasi> [fungsi] [delay];
+
+    FUNGSI TRANSISI / TIMING FUNCTION
+    Artinya pergerakkan apa yang nantinya akan dilakukan pada saat menggunakan transition
+
+    Timing function value :
+    - ease
+    - ease-in
+    - ease-out
+    - ease-in-out
+    - linear
+    - cubic-bezier(w,x,y,z)
+    */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container1,
+.container2 {
+    width: 800px;
+    height: auto;
+    margin: 50px auto;
+    border: solid 3px black
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    text-align: center;
+    line-height: 100px;
+}
+
+.kotak {
+    margin-bottom: 5px;
+    transition: all 3s;
+}
+
+.kotak2 {
+    margin-bottom: 5px;
+    transition: all 3s ease-in;
+}
+
+.kotak3 {
+    margin-bottom: 5px;
+    transition: all 3s ease-out;
+}
+
+.kotak4 {
+    margin-bottom: 5px;
+    transition: all 3s ease-in-out;
+}
+
+.kotak5 {
+    transition: all 3s linear;
+}
+
+/* untuk cubic-bezier untuk memudahkan menentukan nilainya, dapat diinspect element di web browser */
+.kotak6 {
+    transition: all 1s cubic-bezier(0, 1.12, 1, -0.01);
+}
+
+.kotak7 {
+    transition: margin-left 2s, transform 3s, background-color 500ms 3s;
+}
+
+.container1:hover .kotak,
+.container2:hover .kotak {
+    transform: rotate(720deg);
+    margin-left: 700px;
+    background-color: blue;
+}
