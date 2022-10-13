@@ -1,0 +1,98 @@
+/* 
+    Animation
+    animasi memiliki banyak kondisi, tidak seperti transisi yang hanaya memiliki awal dan akhir saja,
+    tetapi animasi memiliki bermacam2 kondisi.
+
+    Contoh Properti
+
+    #ShortHand
+    animation: 
+    <nameKeyFrame> 
+    <duration> 
+    [timingFunction]  
+    [iteration-count = angka | infinite] 
+    [direction = normal | reverse | alternate | alternate-reverse]
+    [fill-mode = none | forwards | backwards | both]
+    [playstate = running | paused]
+
+    #Manual
+    animation-name: animasiKotak;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+    Jika animasi tidak di trigger melalui apapun contoh tanpa hover, maka animasi akan langsung dijalankan
+    pada saat halaman tersebut diload.
+    contoh tanpa trigger:
+        @keyframes animasiKotak {
+    
+            0% {
+                width: 200px;
+            }
+    
+            50% {
+                width: 500px;
+                height: 200px;
+            }
+    
+            100% {
+                width: 500px;
+                height: 500px;
+            }
+    
+        }
+*/
+
+
+.kotak {
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+
+    /* Jika menggunakan transition */
+    /* transition: 1s; */
+
+    /* Jika tanpa triger dari hover :*/
+    animation: animasiKotak 2s 3 alternate forwards running;
+
+}
+
+.kotak:hover {
+    /* Default */
+    /* animation: animasiKotak 2s; */
+
+    /* iteration-count */
+    /* Adalah berapa kali animasi itu mau dijalankan */
+    /* animation: animasiKotak 2s 2; */
+
+}
+
+/* Dengan from dan to */
+/* @keyframes animasiKotak {
+    from {
+        width: 200px;
+    }
+    
+    to {
+        width: 500px;
+    }
+} */
+
+/* Dengan persen */
+@keyframes animasiKotak {
+
+    0% {
+        width: 200px;
+    }
+
+    50% {
+        width: 500px;
+        height: 200px;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+    }
+
+}
