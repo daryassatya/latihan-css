@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(/font/Roboto-Regular.ttf);
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font: 16px/36px 'Roboto', 'sans-serif';
+    background-color: #eee;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+li {
+    width: 120px;
+    height: 120px;
+    margin: 10px 35px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    border: solid 4px black;
+}
+
+
+.hero-title {
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+li a .thumb {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+li a .image-title {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200, 200, 200, .5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+    transition: .5s;
+    transform: scale(0);
+}
+
+li a:hover .image-title {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+li,
+li a .thumb,
+li a .imgae-title {
+    border-radius: 50%;
+}
