@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(/font/Roboto-Regular.ttf);
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font: 16px/36px 'Roboto', 'sans-serif';
+    background-color: #eee;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+li {
+    width: 120px;
+    height: 120px;
+    margin: 10px 35px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    border: solid 4px black;
+}
+
+
+.hero-title {
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+li a .thumb {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+li a .image-title {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200, 200, 200, .5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+    transition: .5s;
+    transform: scale(0);
+}
+
+li a:hover .image-title {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+li,
+li a .thumb,
+li a .imgae-title {
+    border-radius: 50%;
+}
+
+
+/* --- Overlay --- */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    text-align: center;
+    padding: 100px 0;
+    transition: .8s;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+
+}
+
+.overlay img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .8);
+}
+
+.overlay:target img {
+    animation: zoomFade 1s;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border: solid 2px white;
+    line-height: 16px;
+    padding: 5px;
+}
+
+.overlay:target .close {
+    /* .5s yang paling akhir adalah delay */
+    animation: slideDownFade .5s, 5s;
+}
+
+/* Image Animation */
+@keyframes zoomFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Close Button Animation */
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
