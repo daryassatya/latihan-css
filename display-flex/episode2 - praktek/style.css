@@ -1,0 +1,173 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+
+
+/* --- Style CSS Contoh 1 --- */
+.container-satu {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.container-satu div {
+    margin: 2px;
+    /* background-color: aqua; */
+}
+
+.container-satu div.kolom-utama {
+    flex: 3;
+    order: 2;
+}
+
+.container-satu div.sidebar-satu {
+    flex: 1;
+    order: 1;
+}
+
+.container-satu div.sidebar-dua {
+    flex: 1;
+    order: 3;
+}
+
+
+/* --- Style CSS Contoh 2 --- */
+.container-dua {
+    max-width: 800px;
+    margin: 50px auto;
+
+}
+
+.layanan {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.layanan.satu {
+    background-color: rgb(119, 119, 255);
+}
+
+.layanan.dua {
+    background-color: rgb(103, 216, 183);
+}
+
+.layanan.tiga {
+    background-color: rgb(255, 124, 124);
+}
+
+
+/* --- Style CSS Contoh 3 --- */
+.container-tiga {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.thumbnail {
+    width: 50%;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Style CSS Contoh 4 --- */
+.container-empat {
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.card {
+    border: 1px solid #999;
+    border-radius: 10px;
+    background-color: #eee;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card .header {
+    height: 150px;
+    background-color: #666;
+
+}
+
+.card .card-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.12);
+    transition: 2s;
+}
+
+.card:after {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+/* --- Style CSS Contoh 5 --- */
+.container-lima {
+    width: 800px;
+    height: 500px;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: flex;
+
+    /* cara 1 */
+    justify-content: center;
+    align-items: center;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+.kotak .span {
+    /* cara 2 (pembungkusnya harus flex dan margin auto berada pada element yg ingin di ketengahkan) */
+    margin: auto;
+}
+
+/* Untuk mengatrur responsif */
+@media(min-width: 600px) {
+    .container-dua {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .layanan {
+        width: 30%;
+    }
+
+    .thumbnail {
+        width: 25%;
+    }
+
+    .thumbnail img {
+        height: 100%;
+    }
+}
