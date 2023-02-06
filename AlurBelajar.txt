@@ -5,3 +5,5 @@ Ikuti Step By Step :
 1. css-dasar
 2. css-layouting
 3. css3
+4. display-flex
+5. idplay-grid

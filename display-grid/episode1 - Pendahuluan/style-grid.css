@@ -1,0 +1,54 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* --- Cont0h Metode Dengan Grid --- */
+.container {
+    width: 600px;
+    margin: 30px auto;
+    border: 5px black solid;
+    box-sizing: border-box;
+    padding: 5px;
+    display: grid;
+    grid-template-areas: "header header" "aside main" "nav main" "footer footer";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1.3fr;
+}
+
+header {
+    grid-area: header;
+    background-color: purple;
+    padding: 40px 0;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+    padding: 60px 0;
+}
+
+nav {
+    grid-area: nav;
+    background-color: red;
+    padding: 118px 0;
+}
+
+main {
+    grid-area: main;
+    background-color: lightsalmon;
+    padding: 200px 0;
+    box-sizing: border-box;
+}
+
+footer {
+    grid-area: footer;
+    background-color: grey;
+    padding: 40px 0;
+}

@@ -1,0 +1,61 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* --- Contoh Metode Dengan FLOAT --- */
+.container {
+    width: 600px;
+    margin: 30px auto;
+    border: 5px solid #333;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+header {
+    background-color: purple;
+    padding: 40px 0;
+}
+
+.sidebar {
+    float: left;
+    width: 40%;
+    
+}
+
+.sidebar aside {
+    background-color: blue;
+    padding: 70px 0;
+}
+
+.sidebar nav {
+    background-color: red;
+    padding: 118px 0;
+}
+
+main {
+    background-color: lightsalmon;
+    padding: 200px 0;
+    float: right;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.content::after{
+    content: '';
+    display: grid;
+    clear: both;
+}
+
+footer {
+    background-color: grey;
+    padding: 40px;
+}
+
