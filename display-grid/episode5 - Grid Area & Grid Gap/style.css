@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+    1. grid-template-area
+
+Mendefinisikan grid template menggunakan nama dari area yang ditulis pada property grid-area pada item. */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-areas:
+        'header header header'
+        'sidebar sidebar sidebar'
+        'content content content'
+        'footer footer footer';
+}
+
+.container .item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.container .item.header {
+    grid-area: header;
+    background-color: #4ab9e3;
+}
+
+.container .item.sidebar {
+    grid-area: sidebar;
+    background-color: #b8a274;
+}
+
+.container .item.content {
+    grid-area: content;
+    background-color: #a4ee91;
+}
+
+.container .item.footer {
+    grid-area: footer;
+    background-color: #cb9cdc;
+}
+
+/* Responsive Breakpoints */
+@media(min-width: 576px) {
+    .container {
+        grid-template-areas: 'header header header' 'sidebar content content' 'sidebar content content' 'footer footer footer';
+    }
+}
+
+/* Sebelum menggunakan grid-template-areas */
+/* .item:nth-child(even) {
+    background-color: #ff8080;
+}
+
+.item:nth-child(odd) {
+    background-color: rgb(80, 151, 233);
+} */
+
+
+/* 
+    2. grid-template
+
+Shorthand untuk mendefinisikan grid-template-rows,
+grid-template-columns,
+dan grid-template-areas dalam satu deklarasi. 
+
+contoh : 
+grid-template: <grid-template-rows> | <grid-template-area> / <grid-template-columns
+*/
+
+
+.container2 {
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    /* grid-template:
+          [baris1-mulai] 'header header header' 50px [baris1-akhir]
+          [baris2-mulai] 'footer footer footer' 50px [baris2-akhir]
+          / 1fr 2fr 3fr; */
+    grid-template-rows: [baris1-mulai] 50px [baris1-akhir baris1-akhir] 50px [baris2-akhir];
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-areas:
+        'header header header'
+        'footer footer footer';
+}
+
+.container2 .item {
+    background-color: rgb(138, 209, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container2 .item:nth-child(even) {
+    background-color: rgb(255, 142, 142);
+}
+
+
+/* 
+    3. grid-column-gap & grid-row-gap column-gap & row-gap
+
+    Mendefinisikan ukuran grid-line / jarak antara baris atau kolom
+
+    Short hand :
+    gap: <row-gap> <column-gap>
+    grid-gap: <row-gap> <column-gap>
+ */
+
+.container3 {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    /* column-gap: 10px;
+    row-gap: 10px; */
+    gap: 10px;
+
+
+}
+
+.container3 .item {
+    background-color: rgb(138, 209, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 100px;
+}
+
+.container3 .item:nth-child(even) {
+    background-color: rgb(255, 142, 142);
+}
+
+/* 5. grid Shorthand untuk mendefinisikan properti-properti berikut dalam satu deklarasi : grid-template-rows,
+grid-template-columns,
+grid-template-areas,
+grid-auto-rows,
+grid- auto-colums dan grid-auto-flow */
