@@ -7,6 +7,7 @@
     5. Grid area
     6. Grid track
     7. Grid gap
+    8. Explicit & Implicit Grid
 */
 
 /* 
@@ -45,4 +46,9 @@
 
     7. Grid Gap
     "Jarak antar grid track/cell (mirip seperti margin tapi ini antar cell)"
+
+    8. Explicit & Implicit Grid
+    - Explicit adalah secara jelas kita menentukan ukuran dari gridnya (kolom&baris)
+    - Implicit adalah gridnya menentukan secara otomatis sisa 
+    dari kolom&baris yang tidak kita tentukand dari explicit
  */

@@ -1,0 +1,138 @@
+/* 
+    Special Function & Keywords
+
+    1. repeat()
+    2. min-content & max-content
+    3. auto-fill & auto-fit
+    4. minmax()
+*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+h3 {
+    text-align: center;
+    margin: 50px auto 10px;
+}
+
+/* 
+    1. repeat()
+    Menentukan ukuran grid track secara berulang
+
+    grid-template-columns: repeat(9, 1fr); 
+*/
+
+.container {
+    width: 600px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) repeat(5, 1.5fr);
+}
+
+.container .item {
+    background-color: rgb(138, 209, 256);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .item:nth-child(even) {
+    background-color: rgb(255, 142, 142);
+}
+
+
+/* 
+    2. min-content & max-content
+    Menentukan seberapa besar ukuran grid track berdasarkan content pada sebuah item
+
+*/
+
+/* min-content */
+/* .container2 {
+    width: 600px;
+    margin: 10 auto;
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+}
+
+.container2 .item {
+    background-color: rgb(138, 209, 256);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 .item:nth-child(even) {
+    background-color: rgb(255, 142, 142);
+} */
+
+/* max-content */
+.container2 {
+    width: 600px;
+    margin: 10 auto;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+}
+
+.container2 .item {
+    background-color: rgb(138, 209, 256);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 .item:nth-child(even) {
+    background-color: rgb(255, 142, 142);
+}
+
+
+/* 
+    4. auto-fill & auto-fit
+    Menentukan jumlah item untuk berada pada grid track
+
+*/
+.container3 {
+    width: 60%;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+}
+
+.container3 .item {
+    background-color: rgb(138, 209, 256);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container3 .item:nth-child(even) {
+    background-color: rgb(255, 142, 142);
+}
+
+/* 
+    4. minmax() 
+    Menentukan ukuran minimal dan maksimal dari grid track
+*/
+.container4 {
+    width: 60%;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 300px) 1fr;
+}
+
+.container4 .item {
+    background-color: rgb(138, 209, 256);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container4 .item:nth-child(even) {
+    background-color: rgb(255, 142, 142);
+}
