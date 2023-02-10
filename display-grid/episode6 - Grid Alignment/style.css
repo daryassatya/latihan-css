@@ -1,0 +1,252 @@
+/* 
+        Grid Alignment
+
+        • justify-items 
+        • align-items 
+        • place-items 
+        • justify-content 
+        • align-content 
+        • place-content
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* 
+    • justify-items
+        Mensejajarkan grid-items pada sumbu horizontal
+        
+    default value: stretch (jika itemnya tidak memiliki width)
+*/
+.container-justify-items {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 130px);
+    gap: 5px;
+    /* justify-items: start; */
+    /* justify-items: end; */
+    justify-items: center;
+    /* justify-items: stretch; */
+    border: 3px solid black;
+}
+
+.container-justify-items .items {
+    border: 3px solid black;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.container-justify-items .items.i1,
+.container-justify-items .items.i4,
+.container-justify-items .items.i7 {
+    width: 130px;
+}
+
+.container-justify-items .items.i2,
+.container-justify-items .items.i5,
+.container-justify-items .items.i8 {
+    width: 80px;
+}
+
+.container-justify-items .items.i3,
+.container-justify-items .items.i6,
+.container-justify-items .items.i9 {
+    width: 170px;
+}
+
+
+/* 
+    • align-items
+        Mensejajarkan grid-items pada sumbu vertikal
+        
+    default value: stretch (jika itemnya tidak memiliki width)
+*/
+.container-align-items {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 130px);
+    gap: 5px;
+    align-items: start;
+    /* align-items: end; */
+    /* align-items: center; */
+    /* align-items: stretch; */
+}
+
+.container-align-items .items {
+    border: 3px solid black;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.container-align-items .items.i1,
+.container-align-items .items.i4,
+.container-align-items .items.i7 {
+    width: 130px;
+}
+
+.container-align-items .items.i2,
+.container-align-items .items.i5,
+.container-align-items .items.i8 {
+    width: 80px;
+}
+
+.container-align-items .items.i3,
+.container-align-items .items.i6,
+.container-align-items .items.i9 {
+    width: 170px;
+}
+
+
+/* 
+    • place-items
+        Mensejajarkan grid-items pada sumbu vertikal dan horizontal
+        
+    default value: stretch (jika itemnya tidak memiliki width)
+
+    contoh:
+    place-items: <align-itens> <justify-items>
+*/
+.container-place-items {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 130px);
+    gap: 5px;
+    /* place-items: center center; */
+    place-items: center;
+    /*has same meaning as center center*/
+    /* place-items: end; */
+    /* place-items: center; */
+    /* place-items: stretch; */
+}
+
+.container-place-items .items {
+    border: 3px solid black;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.container-place-items .items.i1,
+.container-place-items .items.i4,
+.container-place-items .items.i7 {
+    width: 130px;
+}
+
+.container-place-items .items.i2,
+.container-place-items .items.i5,
+.container-place-items .items.i8 {
+    width: 80px;
+}
+
+.container-place-items .items.i3,
+.container-place-items .items.i6,
+.container-place-items .items.i9 {
+    width: 170px;
+}
+
+
+/* 
+    • justify-content
+        Mengatur posisi seluruh grid container pada sumbu horizontal. Ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran containernya,
+        biasanya ketika grid items nya menggunakan ukuran yang fixed (px)
+
+        contoh :
+    justify-content: start | end | center | stretch | space-around | space-between | space-evenly
+*/
+.container-justify-content {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 120px 180px 120px;
+    grid-template-rows: 80px 80px;
+    gap: 5px;
+    /* justify-content: start; */
+    /* justify-content: end; */
+    /* justify-content: center; */
+    /* justify-content: stretch; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+}
+
+.container-justify-content .items {
+    width: 100px;
+    height: 50px;
+    border: 3px solid black;
+    background-color: lightblue;
+    justify-content: end;
+}
+
+
+/* 
+    • align-content
+        sama seperti justify-contenttapi untuk sumbu vertical
+
+        contoh :
+    align-content: start | end | center | stretch | space-around | space-between | space-evenly
+*/
+.container-align-content {
+    width: 80%;
+    height: 700px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 120px 180px 120px;
+    grid-template-rows: 80px 80px;
+    gap: 5px;
+    /* align-content: start; */
+    align-content: end;
+    /* align-content: center; */
+    /* align-content: stretch; */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    /* align-content: space-evenly; */
+}
+
+.container-align-content .items {
+    width: 100px;
+    height: 50px;
+    border: 3px solid black;
+    background-color: lightblue;
+    justify-content: end;
+}
+
+
+/* 
+    • place-content
+        shorthand untuk menulis justify-content dan align-content dalam satu deklarasi.
+
+        contoh :
+    place-content: start | end | center | stretch | space-around | space-between | space-evenly
+*/
+.container-place-content {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 120px 180px 120px;
+    grid-template-rows: 80px 80px;
+    gap: 5px;
+    /* justify-content: center;
+        align-content: center; */
+    /* place-content: space-between; */
+    place-content: start center;
+}
+
+.container-place-content .items {
+    width: 100px;
+    height: 50px;
+    border: 3px solid black;
+    background-color: lightblue;
+    justify-content: end;
+}
