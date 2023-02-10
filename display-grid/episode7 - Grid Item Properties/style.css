@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ddd;
+}
+
+
+/* 
+        grid-column-start & grid-column-end 
+        grid-row-start & grid-row-end
+
+        Menentukan tempat dari grid item dengan mengacu pada nomor atau nama grid line yang spesifik
+
+        contoh:
+        grid-column-start: <nomor> | <nama> | span <nomor> | span <nama> | auto
+        grid-column-end: <nomor> | <nama> | span <nomor> | span <nama> | auto
+        grid-row-start: <nomor> | <nama> | span <nomor> | span <nama> | auto
+        grid-row-end: <nomor> | <nama> | span <nomor> | span <nama> | auto
+
+        • <nomor>| <nama> : mengacu pada nomor atau nama yang kita beri pada grid line 
+        • span <nomor> : item akan memanjang / melebar sampai sejumlah nomor 
+        • span <nama> : item akan memanjang / melebar sampai ke nama grid line tertentu
+*/
+
+.container1 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+
+    /* grid-template-columns: [satu] minmax(200px, 300px), [dua] 1fr [tiga] 1fr [empat];
+    grid-template-rows: [baris1] 100px [baris2] 100px [baris3] 100px [baris4s]; */
+    border: 2px solid black;
+}
+
+.container1 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 .my-item {
+
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    /* grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: span 2; */
+
+    /* Harus memberi nama line nya terlebih dahulu */
+    /* grid-column-start: satu;
+     grid-column-end: empat;
+    grid-row-start: baris1;
+    grid-row-end: b4; */
+
+    /* grid-column-start: -1;
+    grid-column-end: -2;
+    grid-row-start: -4;
+    grid-row-end: -1; */
+
+    background-color: lightblue;
+}
+
+
+/* 
+    grid-column & grid-row
+
+    Shorthand untuk start dan end pada grid-column & grid-row
+
+    contoh:
+    grid-column: <start-line> / <end-line> | <start-line> / span <value>
+    grid-row: <start-line> / <end-line> | <start-line> / span <value>
+*/
+.container2 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+
+    grid-template-columns: [satu] minmax(200px, 300px), [dua] 1fr [tiga] 1fr [empat];
+    grid-template-rows: [baris1] 100px [baris2] 100px [baris3] 100px [baris4s];
+    border: 2px solid black;
+}
+
+.container2 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 .my-item {
+    /* grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4; */
+
+    /* short hand */
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+
+    /* grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: span 2; */
+
+    /* Harus memberi nama line nya terlebih dahulu */
+    /* grid-column-start: satu;
+     grid-column-end: empat;
+    grid-row-start: baris1;
+    grid-row-end: b4; */
+
+    /* grid-column-start: -1;
+    grid-column-end: -2;
+    grid-row-start: -4;
+    grid-row-end: -1; */
+
+
+    background-color: lightblue;
+}
+
+/* 
+    grid-area
+
+    Menentukan nama area pada item sesuai dengan template yang sudah dibuat sebelumnya melalui properti grid-template-areas. Bisa digunakan sebagai shorthand untuk grid-column-start,
+    grid-column- end,
+    grid-row-start dan grid-row-end
+
+    contoh:
+    grid-area: <area> | <row-start> / <column-start> / <row-end> / <column-end>
+*/
+.container3 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas:
+        'header header header'
+        'sidebar content content'
+        'footer footer footer';
+}
+
+.container3 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container3 .header {
+    grid-area: header;
+    background-color: lightblue;
+}
+
+.container3 .sidebar {
+    grid-area: content;
+    background-color: salmon;
+}
+
+.container3 .content {
+    grid-area: sidebar;
+    background-color: lightgreen;
+}
+
+.container3 .footer {
+    grid-area: footer;
+    background-color: silver;
+}
+
+/* grid-area sebagai short hand */
+.container4 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+}
+
+.container4 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container4 .my-item {
+    /* grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 3; */
+
+    grid-area: 2 / 1 / 4 / 3;
+
+    background-color: lightblue;
+}
+
+/* 
+    justify-self
+
+    Mengatur posisi item pada sebuah cell terhadap sumbu horizontal
+
+    contoh: 
+    justify-self: start | end | center | stretch
+*/
+.container5 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+    border: 2px solid black;
+    /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+        grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+}
+
+.container5 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container5 .my-item {
+    /* justify-self: start; */
+    /* justify-self: end; */
+    justify-self: center;
+    /* justify-self: stretch; (default)*/
+    background-color: lightblue;
+}
+
+
+/* 
+    justify-self
+
+    Mengatur posisi item pada sebuah cell terhadap sumbu horizontal
+
+    contoh: 
+    justify-self: start | end | center | stretch
+*/
+.container6 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+    border: 2px solid black;
+    /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+        grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+}
+
+.container6 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container6 .my-item {
+    /* align-self: start; */
+    /* align-self: end; */
+    align-self: center;
+    /* align-self: stretch; (default)*/
+    background-color: lightblue;
+}
+
+
+/* 
+    place-self
+
+    Shorthand posisi item pada sebuah cell terhadap sumbu vertikal dan sumbu horizontal dalam satu deklarasi
+
+    contoh: 
+    place-self: <align-self> <place-self>
+*/
+.container7 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+
+    /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+        grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+}
+
+.container7 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container7 .my-item {
+    background-color: lightblue;
+    place-self: end;
+}
